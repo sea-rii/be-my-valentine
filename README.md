@@ -31,7 +31,7 @@ No frameworks. No libraries. Just vibes.
 
 ## 🚀 Live Demo
 
-👉 **[Click here to view the live site]([https://sea-rii.github.io/be-my-valentine/])**
+ 👉 https://sea-rii.github.io/be-my-valentine/
 
 
 ## 📂 Project Structure
