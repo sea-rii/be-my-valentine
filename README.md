@@ -48,7 +48,7 @@ be-my-valentine/
 
 1. Clone the repo:
    ```bash
-   git clone https://github.com/YOUR_USERNAME/be-my-valentine.git
+   git clone https://github.com/sea-rii/be-my-valentine.git
 
 2. Open the folder:
     > cd be-my-valentine
