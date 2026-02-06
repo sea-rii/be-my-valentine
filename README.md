@@ -5,7 +5,6 @@ A cute, interactive Valentine’s Day web page to ask the most important questio
 
 Built with love, baby-pink aesthetics, floating hearts, playful interactions, and a fun surprise when the answer is **YES**.
 
----
 
 ## ✨ Features
 
@@ -19,7 +18,6 @@ Built with love, baby-pink aesthetics, floating hearts, playful interactions, an
 - 📱 Fully responsive (works on mobile & desktop)
 - 🔗 Share button (works when hosted publicly)
 
----
 
 ## 🛠 Tech Stack
 
@@ -30,13 +28,11 @@ Built with love, baby-pink aesthetics, floating hearts, playful interactions, an
 
 No frameworks. No libraries. Just vibes.
 
----
 
 ## 🚀 Live Demo
 
 👉 **[Click here to view the live site]([https://sea-rii.github.io/be-my-valentine/])**
 
----
 
 ## 📂 Project Structure
 ```
@@ -47,7 +43,6 @@ be-my-valentine/
 └── README.md
 ```
 
----
 
 ## 🧪 Run Locally
 
@@ -56,12 +51,11 @@ be-my-valentine/
    git clone https://github.com/YOUR_USERNAME/be-my-valentine.git
 
 2. Open the folder:
-  > cd be-my-valentine
+    > cd be-my-valentine
 
 3. Open index.html in your browser
     (or use VS Code Live Server)
 
---- 
 
 ## 🩷 Made With Love By
 
