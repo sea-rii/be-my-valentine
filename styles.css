@@ -1,0 +1,205 @@
+:root{
+  --text:#231f27;
+  --muted: rgba(35,31,39,0.72);
+
+  --btnYes:#ff2d70;
+  --btnYes2:#ff4d8d;
+
+  --shadow: 0 22px 60px rgba(0,0,0,0.12);
+  --radius: 18px;
+}
+
+*{ box-sizing:border-box; }
+html,body{ height:100%; }
+
+body{
+  margin:0;
+  font-family: ui-rounded, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+  color:var(--text);
+  overflow-x:hidden;
+
+  /* Baby pink seamless background (no white corners) */
+  background:
+    linear-gradient(
+      135deg,
+      #ffe6ef 0%,
+      #ffd6e6 35%,
+      #ffc3da 60%,
+      #ffb3d1 100%
+    );
+  background-attachment: fixed;
+}
+
+/* Celebration canvas */
+#celebrate{
+  position:fixed;
+  inset:0;
+  width:100%;
+  height:100%;
+  pointer-events:none;
+  z-index:3;
+}
+
+/* Floating hearts layer */
+#hearts{
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  overflow:hidden;
+  z-index:1;
+}
+
+.heart{
+  position:absolute;
+  bottom:-60px;
+  opacity:0.95;
+  animation: floatUp linear forwards;
+  user-select:none;
+  will-change: transform, opacity;
+  filter: drop-shadow(0 10px 12px rgba(0,0,0,0.08));
+}
+
+@keyframes floatUp{
+  0%   { transform: translateY(0) translateX(0) scale(1) rotate(0deg); opacity:0; }
+  10%  { opacity:0.95; }
+  100% { transform: translateY(-120vh) translateX(var(--drift)) scale(var(--scale)) rotate(var(--rot)); opacity:0; }
+}
+
+.wrap{
+  min-height:100%;
+  display:grid;
+  place-items:center;
+  padding: 28px 16px;
+  position:relative;
+  z-index:2;
+}
+
+/* Seamless content (no box) */
+.content{
+  width:min(720px, 100%);
+  text-align:center;
+  padding: 10px 8px;
+}
+
+.top-emoji{
+  font-size: clamp(34px, 6vw, 54px);
+  margin-bottom: 10px;
+}
+
+.title{
+  margin: 0 0 10px;
+  font-size: clamp(32px, 6vw, 58px);
+  letter-spacing: -0.02em;
+  line-height: 1.05;
+  text-shadow: 0 8px 30px rgba(0,0,0,0.12);
+}
+
+.subtitle{
+  margin: 0 0 18px;
+  font-size: clamp(14px, 2.6vw, 18px);
+  color: var(--muted);
+}
+
+.buttons{
+  display:flex;
+  gap: 12px;
+  justify-content:center;
+  flex-wrap:wrap;
+  margin-top: 12px;
+}
+
+.btn{
+  border:none;
+  border-radius: var(--radius);
+  padding: 14px 22px;
+  font-size: 16px;
+  font-weight: 800;
+  cursor:pointer;
+  min-height: 52px;
+  min-width: 140px;
+  transition: transform 180ms ease, filter 140ms ease, box-shadow 180ms ease;
+}
+
+.btn:hover{ transform: translateY(-1px); filter: brightness(1.02); }
+.btn:active{ transform: translateY(1px) scale(0.99); }
+
+.yes{
+  color:white;
+  background: linear-gradient(135deg, var(--btnYes), var(--btnYes2));
+  box-shadow: 0 16px 35px rgba(255,45,112,0.25);
+}
+
+.no{
+  color: #2b2832;
+  background: rgba(255,255,255,0.75);
+  border: 1px solid rgba(0,0,0,0.06);
+  box-shadow: 0 16px 35px rgba(0,0,0,0.10);
+}
+
+.ghost{
+  color:#2b2832;
+  background: rgba(255,255,255,0.65);
+  border: 1px solid rgba(0,0,0,0.06);
+}
+
+.hint{
+  margin-top: 12px;
+  min-height: 22px;
+  font-size: 13px;
+  color: rgba(35,31,39,0.75);
+}
+
+.footer{
+  display:flex;
+  justify-content:center;
+  gap:10px;
+  flex-wrap:wrap;
+  margin-top: 18px;
+}
+
+.pill{
+  font-size:12px;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.65);
+  border: 1px solid rgba(0,0,0,0.06);
+}
+
+/* Success overlay */
+.success{
+  position:fixed;
+  inset:0;
+  display:grid;
+  place-items:center;
+  padding: 24px 16px;
+  background: rgba(255, 214, 229, 0.45);
+  backdrop-filter: blur(8px);
+  z-index:5;
+}
+.success.hidden{ display:none; }
+
+.successCard{
+  width:min(520px, 100%);
+  background: rgba(255,255,255,0.78);
+  border: 1px solid rgba(0,0,0,0.06);
+  border-radius: 24px;
+  box-shadow: var(--shadow);
+  padding: 22px 18px;
+  text-align:center;
+}
+
+.big{ font-size: 56px; margin-bottom: 6px; }
+.successCard h2{ margin: 6px 0 8px; font-size: 32px; }
+.successCard p{ margin: 0 0 14px; color: rgba(35,31,39,0.75); line-height:1.5; }
+
+.row{
+  display:flex;
+  gap:10px;
+  justify-content:center;
+  flex-wrap:wrap;
+}
+
+@media (max-width: 420px){
+  .btn{ min-width: 140px; width: 100%; max-width: 320px; }
+  .buttons{ width: 100%; }
+}
